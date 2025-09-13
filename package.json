@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Open Source people management tool, built in the open for leaders and people to safely have efficient and impactful conversations",
   "private": true,
-  "packageManager": "pnpm@8.0.0",
+  "packageManager": "pnpm@10.16.0",
   "workspaces": [
     "apps/*",
     "packages/*"
