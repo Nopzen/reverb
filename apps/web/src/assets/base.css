@@ -1,52 +1,109 @@
-/* color palette from <https://github.com/vuejs/theme> */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Default: Light Mode */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* Base Colors - Light Mode */
+  --color-primary: #bb29b7;
+  /* Soft Neon Pink */
+  --color-secondary: #8944e8;
+  /* Vivid Purple */
+  --color-accent: #ff8c00;
+  /* Warm Neon Orange */
+  --color-highlight: #e81cff;
+  /* Vibrant Magenta */
+  --color-sunburst: #ffc83d;
+  /* Golden Yellow */
+  --color-background: #ffffff;
+  /* Light background */
+  --color-surface: #f3f0fb;
+  /* Light lavender surface */
+  --color-foreground: #0d0028;
+  /* Deep purple for readable text */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* UI Elements */
+  --color-muted: #c3a9e6;
+  --color-border: #ddc9f8;
+  --color-shadow: rgba(0, 0, 0, 0.1);
 
-  --vt-c-indigo: #2c3e50;
+  /* Interactive */
+  --btn-bg: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  --btn-hover: #ff44aa;
+  --btn-text: #ffffff;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* Alerts */
+  --color-success: #00d9b3;
+  --color-error: #ff3b6e;
+  --color-info: #20bdf4;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  /* Font */
+  --font-family: 'Montserrat', sans-serif;
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Open Sans', sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 2rem;      /* 32px */
+  --font-size-4xl: 2.5rem;    /* 40px */
+  --font-size-display: 3rem;  /* 48px */
+
+  /* Spacing */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem;  /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;    /* 16px */
+  --spacing-5: 1.5rem;  /* 24px */
+  --spacing-6: 2rem;    /* 32px */
+  --spacing-7: 3rem;    /* 48px */
+  --spacing-8: 4rem;    /* 64px */
+
+  /* Border Radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem;  /* 8px */
+  --radius-lg: 1rem;    /* 16px */
+  --radius-full: 9999px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.8;
 }
 
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
+/* Dark Mode Overrides */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+    --color-primary: #d726d4;
+    /* Vibrant Neon Pink */
+    --color-secondary: #6a0dad;
+    /* Deep Electric Purple */
+    --color-accent: #ff6a00;
+    /* Bright Neon Orange */
+    --color-highlight: #ff2fb6;
+    /* Hot Magenta */
+    --color-sunburst: #ffcc33;
+    /* Radiant Yellow */
+    --color-background: #130022;
+    /* Deep Midnight Blue */
+    --color-surface: #1f0333;
+    /* Rich Purple Surface */
+    --color-foreground: #ffffff;
+    /* White text for dark bg */
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --color-muted: #a080c9;
+    --color-border: #330066;
+    --color-shadow: rgba(0, 0, 0, 0.4);
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --btn-bg: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    --btn-hover: #ff44aa;
+    --btn-text: #ffffff;
+
+    --color-success: #00ffcc;
+    --color-error: #ff0040;
+    --color-info: #33ccff;
   }
 }
 
@@ -60,27 +117,46 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
+  color: var(--color-primary);
   background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
+  line-height: var(--line-height-base);
+  font-family: var(--font-family-body);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-size-base);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+  color: var(--color-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+
+p {
+  margin-bottom: var(--spacing-4);
+  color: var(--color-foreground);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
 }
