@@ -19,14 +19,14 @@ reverb/
 ### Applications
 
 #### Frontend (apps/web)
-- **Technology**: React with TypeScript
-- **Port**: http://localhost:3001 (when API is running on 3000)
-- **Description**: Simple Hello World React application
+- **Technology**: Vue with TypeScript
+- **Port**: http://localhost:5000
+- **Description**: Web application frontend
 
 #### Backend (apps/api)  
 - **Technology**: NestJS with TypeScript
 - **Port**: http://localhost:3000
-- **Description**: REST API server with health endpoint
+- **Description**: Application backend Rest API
 - **Endpoints**:
   - `GET /` - Returns "Hello World!"
   - `GET /health` - Returns health status with service information
@@ -34,8 +34,8 @@ reverb/
 ## Getting Started
 
 ### Prerequisites
-- Node.js 16+
-- pnpm 8+
+- Node.js 22+
+- pnpm 10+
 
 ### Installation
 
@@ -54,16 +54,6 @@ pnpm clean
 ```
 
 ### Development
-
-#### Start individual applications:
-
-```bash
-# Start API server (http://localhost:3000)
-cd apps/api && pnpm dev
-
-# Start frontend (http://localhost:3001)  
-cd apps/web && pnpm dev
-```
 
 #### Available Commands
 
@@ -95,6 +85,6 @@ Response:
 
 - **Build System**: Turborepo
 - **Package Manager**: pnpm  
-- **Frontend**: React, TypeScript, Create React App
+- **Frontend**: Vue, TypeScript
 - **Backend**: NestJS, TypeScript
 - **Development**: Hot reload for both frontend and backend
